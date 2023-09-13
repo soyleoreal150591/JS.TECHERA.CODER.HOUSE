@@ -19,21 +19,22 @@ else {
 
 }
 
-function eleccionDecliente (listaProductos){
-   return listaProductos =  prompt("Elegí un producto: MIELCITAS ($ 300) - CHUPETINES ($ 350) - MINI ALFAJOR  ($ 570) - PALETAS ($ 380) ").toUpperCase();
+function eleccionDecliente (){
+    listaProductos =  prompt("Elegí un producto: MIELCITAS ($ 300) - CHUPETINES ($ 350) - MINI ALFAJOR  ($ 570) - PALETAS ($ 380) ").toUpperCase();
+    return listaProductos
 
 }
 
-eleccionDecliente ()
+let todosLosproductos = eleccionDecliente ()
 
-while(eleccionDecliente () != "MIELCITAS" && eleccionDecliente () != "CHUPETINES" && eleccionDecliente () != "MINI ALFAJOR" && eleccionDecliente () != "PALETAS"){
-    console.log("elegi una de las opciones");
-    eleccionDecliente () 
+while(todosLosproductos  != "MIELCITAS" && todosLosproductos  != "CHUPETINES" && todosLosproductos  != "MINI ALFAJOR" && todosLosproductos  != "PALETAS"){
+    alert("elegi una de las opciones");
+    todosLosproductos = eleccionDecliente () 
 }
 
-let cantidadProducto = Number(prompt("Elegiste " + eleccionDecliente () + " ¿Cuantos precisas"))
+let cantidadProducto = Number(prompt("Elegiste " + todosLosproductos + " ¿Cuantos precisas"))
 
-switch(eleccionDecliente ()) {
+switch(todosLosproductos ) {
     case "MIELCITAS": console.log("El precio a pagar es $" + cantidadProducto * PRECIO_MIELCITAS );
     break;
     case "CHUPETINES": console.log("El precio a pagar es $" + cantidadProducto * PRECIO_CHUPETINES);
